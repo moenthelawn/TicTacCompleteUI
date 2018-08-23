@@ -22409,5 +22409,9 @@
     <Col name="1" />
     <Board name="*********" />
     </State>
-  <State>
+    <State>
+        <Row name="0" />
+      <Col name="1" />
+      <Board name="X********" />
+      </State>
 </root>

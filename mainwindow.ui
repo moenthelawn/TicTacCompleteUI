@@ -58,7 +58,7 @@
      <string/>
     </property>
    </widget>
-   <widget class="QPushButton" name="row1col0_2">
+   <widget class="QPushButton" name="row1col2">
     <property name="geometry">
      <rect>
       <x>620</x>
