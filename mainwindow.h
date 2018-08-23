@@ -19,10 +19,11 @@ public:
 private slots:
     void on_checkBox_stateChanged(int arg1);
 
+    void setMove_UI(int i,int j,QString PlayerType);
+
     void on_row0col0_clicked();
 
     void on_row0col1_clicked();
-    void setMove_UI(int i,int j,QString PlayerType);
 
     void on_row0col2_clicked();
 
@@ -30,7 +31,7 @@ private slots:
 
     void on_row1col1_clicked();
 
-    void on_row1col0_2_clicked();
+    void on_row1col2_clicked();
 
     void on_row2col0_clicked();
 
@@ -38,7 +39,7 @@ private slots:
 
     void on_row2col2_clicked();
 
-    void on_row1col2_clicked();
+
 
 private:
     Ui::MainWindow *ui;

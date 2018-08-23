@@ -30,7 +30,7 @@ void MainWindow::on_checkBox_stateChanged(int arg1)
 
 void MainWindow::on_row0col0_clicked()
 {
-    qDebug("Test");
+
 if(this->board->setBoardMove(0,0,1) == true){
     QFont font = ui->row0col0->font();
     font.setPointSize(450);
@@ -108,45 +108,107 @@ void MainWindow::setMove_UI(int i, int j,QString PlayerType){
 
 void MainWindow::on_row0col1_clicked()
 {
+    if(this->board->setBoardMove(0,1,1) == true){
+        QFont font = ui->row0col1->font();
+        font.setPointSize(450);
+        ui->row0col1->setText("X");
 
+        vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
+        this->board->setBoardMove(move[0],move[1],2);//Set the board position
+        setMove_UI(move[0],move[1],COMPUTERPLAYER);
+    }
 }
 
 void MainWindow::on_row0col2_clicked()
 {
+    if(this->board->setBoardMove(0,2,1) == true){
+        QFont font = ui->row0col2->font();
+        font.setPointSize(450);
+        ui->row0col2->setText("X");
 
+        vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
+        this->board->setBoardMove(move[0],move[1],2);//Set the board position
+        setMove_UI(move[0],move[1],COMPUTERPLAYER);
+    }
 }
 
 void MainWindow::on_row1col0_clicked()
 {
+    if(this->board->setBoardMove(1,0,1) == true){
+        QFont font = ui->row1col0->font();
+        font.setPointSize(450);
+        ui->row1col0->setText("X");
 
+        vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
+        this->board->setBoardMove(move[0],move[1],2);//Set the board position
+        setMove_UI(move[0],move[1],COMPUTERPLAYER);
+    }
 }
 
 void MainWindow::on_row1col1_clicked()
 {
+    if(this->board->setBoardMove(1,1,1) == true){
+        QFont font = ui->row1col1->font();
+        font.setPointSize(450);
+        ui->row1col1->setText("X");
 
+        vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
+        this->board->setBoardMove(move[0],move[1],2);//Set the board position
+        setMove_UI(move[0],move[1],COMPUTERPLAYER);
+    }
 }
 
-void MainWindow::on_row1col0_2_clicked()
-{
-
-}
 
 void MainWindow::on_row2col0_clicked()
 {
+    if(this->board->setBoardMove(2,0,1) == true){
+        QFont font = ui->row2col0->font();
+        font.setPointSize(450);
+        ui->row2col0->setText("X");
 
+        vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
+        this->board->setBoardMove(move[0],move[1],2);//Set the board position
+        setMove_UI(move[0],move[1],COMPUTERPLAYER);
+    }
 }
 
 void MainWindow::on_row2col1_clicked()
 {
+    if(this->board->setBoardMove(2,1,1) == true){
+        QFont font = ui->row2col1->font();
+        font.setPointSize(450);
+        ui->row2col1->setText("X");
 
+        vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
+        this->board->setBoardMove(move[0],move[1],2);//Set the board position
+        setMove_UI(move[0],move[1],COMPUTERPLAYER);
+    }
 }
 
 void MainWindow::on_row2col2_clicked()
 {
+    if(this->board->setBoardMove(2,2,1) == true){
+        QFont font = ui->row2col2->font();
+        font.setPointSize(450);
+        ui->row2col2->setText("X");
 
+        vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
+        this->board->setBoardMove(move[0],move[1],2);//Set the board position
+        setMove_UI(move[0],move[1],COMPUTERPLAYER);
+    }
 }
 
 void MainWindow::on_row1col2_clicked()
 {
+    if(this->board->setBoardMove(1,2,1) == true){
+        QFont font = ui->row1col2->font();
+        font.setPointSize(450);
+        ui->row1col2->setText("X");
 
+        vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
+        this->board->setBoardMove(move[0],move[1],2);//Set the board position
+        setMove_UI(move[0],move[1],COMPUTERPLAYER);
+    }
+    //Also we want to check if there are no other moves in the game
+   // this->board->checkWinnner()
 }

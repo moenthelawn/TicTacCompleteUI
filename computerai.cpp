@@ -7,43 +7,53 @@
 #include <QDomDocument>
 #include <QtDebug>
 #include <math.h>
+
 using namespace std;
 
+const int BOARDSIZE = 3;
 ComputerAI::ComputerAI()
 {
     this->ComputerDataStructure = LoadXMLStructure("C:/Users/Chris/Documents/TicTaco/PlayerMoves.xml");
 
 }
 
+vector <int> ComputerAI::getRandomMove(vector<vector<int>> board){
+    bool gameLoop = true;
+    vector<int> temp = {0,0};
 
+    while(gameLoop){
+        int row = (rand() % BOARDSIZE); //Compute a random value for the potential move
+        int col = (rand() % BOARDSIZE); //Compute a random value for the potential move
+
+        if (board[row][col] == 0){
+        //Then we have a valid move
+            temp[0] = row;
+            temp[1] = col;
+            return temp;
+
+        }
+
+}
+}
 vector<int> ComputerAI::makeComputerMove(vector<vector<int>> board){
     //This will make the next move of the Computer AI given the
     //current data structure
-    //vector<int> comparaterBoard = convertBoard_Vector(board);
-    qDebug() << "T;alsdkjf";
+
     for (map<vector<vector<int>>,vector<int>>::iterator it = this->ComputerDataStructure.begin();it!=this->ComputerDataStructure.end();++it){
         //We will need to loop through the entire board to match the current board state to one
         //That is in our computer data structure
 
         if (it->first == board){
             //Then we have found the state the computer should be in that matches the current
-            //board state
-          // int i = it->second[0];
-          // int j = it->second[1];
-
-//           board[i][j] = 2; //Update the board to the value that value fo the computer move
 
            return it->second;
         }
 }
     //Otherwise we assign it a random variable
-
+    return getRandomMove(board);  //Otherwise we can return a random move as long as it is valid
 
 }
 
-
-//  }
-//}
 vector<vector<int>> ComputerAI::convert_Vector(QString boardLayout){
     const int SIZE = 3; //Size of our board
     vector <vector<int> > tempHolder(SIZE,vector<int>(SIZE,0)); //Temporary vector to hold the boardlayout conversion
@@ -114,4 +124,4 @@ map <vector<vector<int>>, vector<int>> ComputerAI::LoadXMLStructure(QString file
         dataStorage.insert(std::pair<vector<vector<int>>, vector<int> >(tempVecHolder,temptHolder));
             }
         return dataStorage;
-        }
+}
