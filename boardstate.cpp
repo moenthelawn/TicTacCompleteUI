@@ -1,5 +1,6 @@
 #include "boardstate.h"
 #include <vector>
+#include <QDebug>
 using namespace std;
 //1 corresponds player X
 //2 corresponds player O
@@ -15,9 +16,9 @@ vector<vector<int>> BoardState::getBoard(){
     return this->board;
 }
 bool BoardState::setBoardMove(int i, int j,int PlayerType){
-//Returns 1 if the board move is a valid move
-//Returns 0 if the board move is not a valid move
-//Here we will set the board move based on an input from the user
+    //Returns 1 if the board move is a valid move
+    //Returns 0 if the board move is not a valid move
+    //Here we will set the board move based on an input from the user
 
     if (this->board[i][j] == 0){
         //Then the current board is unoccpuied
@@ -48,7 +49,7 @@ bool BoardState::checkArrayBounds(unsigned int i,unsigned int j){
     //given the upper values we need to check if there
     //is an exceeding of the current bounds
 
-   //Based on the current positio
+    //Based on the current positio
 
 
 }
@@ -64,25 +65,39 @@ bool BoardState::isWinner(unsigned int x, unsigned int y){
      */
 
 
-        //check if previous move caused a win on vertical line
-        if (board[0][y] == board[1][y] && board[1][y] == board[2][y])
-            return true;
+    //check if previous move caused a win on vertical line
+    if (board[0][y] == board[1][y] && board[1][y] == board[2][y])
+        return true;
 
-        //check if previous move caused a win on horizontal line
-        if (board[x][0] == board[x][1] && board[x][1]== board[x][2])
-            return true;
+    //check if previous move caused a win on horizontal line
+    if (board[x][0] == board[x][1] && board[x][1]== board[x][2])
+        return true;
 
-        //check if previous move was on the main diagonal and caused a win
-        if (x == y && board[0][0] == board[1][1] && board[1][1] == board [2][2])
-            return true;
+    //check if previous move was on the main diagonal and caused a win
+    if (x == y && board[0][0] == board[1][1] && board[1][1] == board [2][2])
+        return true;
 
-        //check if previous move was on the secondary diagonal and caused a win
-        if ((x + y) == 2 && board[0][2] == board[1][1] && board[1][1] == board [2][0])
-            return true;
+    //check if previous move was on the secondary diagonal and caused a win
+    if ((x + y) == 2 && board[0][2] == board[1][1] && board[1][1] == board [2][0])
+        return true;
 
-        return false;
+    return false;
 
 }
+void BoardState::PrintBoard(){
+    //This function will print the board out for the sake of debuggin purposes
+    for(unsigned int i =0; i < BOARDSIZE;i++)
+    {
+        for(unsigned int j =0;j < BOARDSIZE;j++){
+            qDebug() << board[i][j];
+
+
+        }
+        qDebug() << " "<<endl;
+    }
+
+}
+
 //We pass in the previous move and check to see if each branch of it corresponds to a win
 unsigned int BoardState::checkState(unsigned int i,unsigned int j,unsigned int playerType){
     /*
@@ -101,7 +116,7 @@ unsigned int BoardState::checkState(unsigned int i,unsigned int j,unsigned int p
     else if (isDraw()){
         this->board = initializeBoard();
         return 3; //We return 3 which corrsponds to the value of a draw
-        }
+    }
     else{
         return 0;//Other wise we retur 0 since there are still valid moves left to be done
     }
@@ -116,7 +131,7 @@ vector<vector<int>> BoardState::initializeBoard(){
         vector <int> tempHolder;
         for(int j =0 ; j < BOARDSIZE;j++){
 
-               tempHolder.push_back(0);
+            tempHolder.push_back(0);
         }
         board.push_back(tempHolder);
     }

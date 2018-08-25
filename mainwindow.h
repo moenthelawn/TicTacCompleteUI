@@ -18,7 +18,7 @@ public:
 
 private slots:
     void on_checkBox_stateChanged(int arg1);
-
+    void redrawBoard();
     void setMove_UI(int i,int j,QString PlayerType);
 
     void on_row0col0_clicked();

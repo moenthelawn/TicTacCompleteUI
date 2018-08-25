@@ -14,6 +14,8 @@ public:
     bool isWinner(unsigned int x, unsigned int y);
     unsigned int checkState(unsigned int i,unsigned int j,unsigned int playerType);
     bool checkArrayBounds(unsigned int i,unsigned int j);
+    void PrintBoard();
+
     bool isDraw();
 
 private:
