@@ -39,6 +39,7 @@ private slots:
 
     void on_row2col2_clicked();
 
+    void deliverConfirmationMessage(unsigned currentBoardStateNumber);
 
 
 private:
