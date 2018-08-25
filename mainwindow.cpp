@@ -46,18 +46,18 @@ void MainWindow::on_row0col0_clicked()
             redrawBoard();
         }
 
-    }
-    vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
-    this->board->setBoardMove(move[0],move[1],O);//Set the board position
 
-    setMove_UI(move[0],move[1],COMPUTERPLAYER);
-    this->board->PrintBoard(); //Printing out for debugging purposes
-    //AlsoF we want to check if there are no other moves in the game
-    currentBoardState_Computer = this->board->checkState(move[0],move[1],O);
-    if (currentBoardState_Computer != 0){
-        redrawBoard();
-    }
+        vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
+        this->board->setBoardMove(move[0],move[1],O);//Set the board position
 
+        setMove_UI(move[0],move[1],COMPUTERPLAYER);
+        this->board->PrintBoard(); //Printing out for debugging purposes
+        //AlsoF we want to check if there are no other moves in the game
+        currentBoardState_Computer = this->board->checkState(move[0],move[1],O);
+        if (currentBoardState_Computer != 0){
+            redrawBoard();
+        }
+    }
 
     qDebug() << "Board State from human player: " << currentBoardState << "Board state from computer " << currentBoardState_Computer;
 
@@ -140,18 +140,18 @@ void MainWindow::on_row0col1_clicked()
             redrawBoard();
         }
 
-    }
-    vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
-    this->board->setBoardMove(move[0],move[1],O);//Set the board position
 
-    setMove_UI(move[0],move[1],COMPUTERPLAYER);
-    this->board->PrintBoard(); //Printing out for debugging purposes
-    //AlsoF we want to check if there are no other moves in the game
-    currentBoardState_Computer = this->board->checkState(move[0],move[1],O);
-    if (currentBoardState_Computer != 0){
-        redrawBoard();
-    }
+        vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
+        this->board->setBoardMove(move[0],move[1],O);//Set the board position
 
+        setMove_UI(move[0],move[1],COMPUTERPLAYER);
+        this->board->PrintBoard(); //Printing out for debugging purposes
+        //AlsoF we want to check if there are no other moves in the game
+        currentBoardState_Computer = this->board->checkState(move[0],move[1],O);
+        if (currentBoardState_Computer != 0){
+            redrawBoard();
+        }
+    }
 
     qDebug() << "Board State from human player: " << currentBoardState << "Board state from computer " << currentBoardState_Computer;
 
@@ -171,18 +171,18 @@ void MainWindow::on_row0col2_clicked()
             redrawBoard();
         }
 
-    }
-    vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
-    this->board->setBoardMove(move[0],move[1],O);//Set the board position
 
-    setMove_UI(move[0],move[1],COMPUTERPLAYER);
-    this->board->PrintBoard(); //Printing out for debugging purposes
-    //AlsoF we want to check if there are no other moves in the game
-    currentBoardState_Computer = this->board->checkState(move[0],move[1],O);
-    if (currentBoardState_Computer != 0){
-        redrawBoard();
-    }
+        vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
+        this->board->setBoardMove(move[0],move[1],O);//Set the board position
 
+        setMove_UI(move[0],move[1],COMPUTERPLAYER);
+        this->board->PrintBoard(); //Printing out for debugging purposes
+        //AlsoF we want to check if there are no other moves in the game
+        currentBoardState_Computer = this->board->checkState(move[0],move[1],O);
+        if (currentBoardState_Computer != 0){
+            redrawBoard();
+        }
+    }
 
     qDebug() << "Board State from human player: " << currentBoardState << "Board state from computer " << currentBoardState_Computer;
 
@@ -203,19 +203,19 @@ void MainWindow::on_row1col0_clicked()
             redrawBoard();
         }
 
+
+        vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
+        this->board->setBoardMove(move[0],move[1],O);//Set the board position
+
+        setMove_UI(move[0],move[1],COMPUTERPLAYER);
+        this->board->PrintBoard(); //Printing out for debugging purposes
+        //AlsoF we want to check if there are no other moves in the game
+        currentBoardState_Computer = this->board->checkState(move[0],move[1],O);
+        if (currentBoardState_Computer != 0){
+            redrawBoard();
+        }
+
     }
-    vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
-    this->board->setBoardMove(move[0],move[1],O);//Set the board position
-
-    setMove_UI(move[0],move[1],COMPUTERPLAYER);
-    this->board->PrintBoard(); //Printing out for debugging purposes
-    //AlsoF we want to check if there are no other moves in the game
-    currentBoardState_Computer = this->board->checkState(move[0],move[1],O);
-    if (currentBoardState_Computer != 0){
-        redrawBoard();
-    }
-
-
     qDebug() << "Board State from human player: " << currentBoardState << "Board state from computer " << currentBoardState_Computer;
 
 
@@ -235,18 +235,18 @@ void MainWindow::on_row1col1_clicked()
             redrawBoard();
         }
 
-    }
-    vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
-    this->board->setBoardMove(move[0],move[1],O);//Set the board position
 
-    setMove_UI(move[0],move[1],COMPUTERPLAYER);
-    this->board->PrintBoard(); //Printing out for debugging purposes
-    //AlsoF we want to check if there are no other moves in the game
-    currentBoardState_Computer = this->board->checkState(move[0],move[1],O);
-    if (currentBoardState_Computer != 0){
-        redrawBoard();
-    }
+        vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
+        this->board->setBoardMove(move[0],move[1],O);//Set the board position
 
+        setMove_UI(move[0],move[1],COMPUTERPLAYER);
+        this->board->PrintBoard(); //Printing out for debugging purposes
+        //AlsoF we want to check if there are no other moves in the game
+        currentBoardState_Computer = this->board->checkState(move[0],move[1],O);
+        if (currentBoardState_Computer != 0){
+            redrawBoard();
+        }
+    }
 
     qDebug() << "Board State from human player: " << currentBoardState << "Board state from computer " << currentBoardState_Computer;
 
@@ -268,18 +268,18 @@ void MainWindow::on_row2col0_clicked()
             redrawBoard();
         }
 
-    }
-    vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
-    this->board->setBoardMove(move[0],move[1],O);//Set the board position
 
-    setMove_UI(move[0],move[1],COMPUTERPLAYER);
-    this->board->PrintBoard(); //Printing out for debugging purposes
-    //AlsoF we want to check if there are no other moves in the game
-    currentBoardState_Computer = this->board->checkState(move[0],move[1],O);
-    if (currentBoardState_Computer != 0){
-        redrawBoard();
-    }
+        vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
+        this->board->setBoardMove(move[0],move[1],O);//Set the board position
 
+        setMove_UI(move[0],move[1],COMPUTERPLAYER);
+        this->board->PrintBoard(); //Printing out for debugging purposes
+        //AlsoF we want to check if there are no other moves in the game
+        currentBoardState_Computer = this->board->checkState(move[0],move[1],O);
+        if (currentBoardState_Computer != 0){
+            redrawBoard();
+        }
+    }
 
     qDebug() << "Board State from human player: " << currentBoardState << "Board state from computer " << currentBoardState_Computer;
 
@@ -288,8 +288,8 @@ void MainWindow::on_row2col0_clicked()
 
 void MainWindow::on_row2col1_clicked()
 {
-    unsigned int currentBoardState;
-    unsigned int currentBoardState_Computer;
+    unsigned int currentBoardState = 0;
+    unsigned int currentBoardState_Computer= 0;
 
     const int IPOSITION = 2;
     const int JPOSITION = 1;
@@ -301,19 +301,19 @@ void MainWindow::on_row2col1_clicked()
             redrawBoard();
         }
 
+
+        vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
+        this->board->setBoardMove(move[0],move[1],O);//Set the board position
+
+        setMove_UI(move[0],move[1],COMPUTERPLAYER);
+        this->board->PrintBoard(); //Printing out for debugging purposes
+        //AlsoF we want to check if there are no other moves in the game
+        currentBoardState_Computer = this->board->checkState(move[0],move[1],O);
+        if (currentBoardState_Computer != 0){
+            redrawBoard();
+        }
+
     }
-    vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
-    this->board->setBoardMove(move[0],move[1],O);//Set the board position
-
-    setMove_UI(move[0],move[1],COMPUTERPLAYER);
-    this->board->PrintBoard(); //Printing out for debugging purposes
-    //AlsoF we want to check if there are no other moves in the game
-    currentBoardState_Computer = this->board->checkState(move[0],move[1],O);
-    if (currentBoardState_Computer != 0){
-        redrawBoard();
-    }
-
-
     qDebug() << "Board State from human player: " << currentBoardState << "Board state from computer " << currentBoardState_Computer;
 
 
@@ -333,19 +333,19 @@ void MainWindow::on_row2col2_clicked()
             redrawBoard();
         }
 
+
+        vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
+        this->board->setBoardMove(move[0],move[1],O);//Set the board position
+
+        setMove_UI(move[0],move[1],COMPUTERPLAYER);
+        this->board->PrintBoard(); //Printing out for debugging purposes
+
+        //AlsoF we want to check if there are no other moves in the game
+        currentBoardState_Computer = this->board->checkState(move[0],move[1],O);
+        if (currentBoardState_Computer != 0){
+            redrawBoard();
+        }
     }
-    vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
-    this->board->setBoardMove(move[0],move[1],O);//Set the board position
-
-    setMove_UI(move[0],move[1],COMPUTERPLAYER);
-    this->board->PrintBoard(); //Printing out for debugging purposes
-
-    //AlsoF we want to check if there are no other moves in the game
-    currentBoardState_Computer = this->board->checkState(move[0],move[1],O);
-    if (currentBoardState_Computer != 0){
-        redrawBoard();
-    }
-
 
     qDebug() << "Board State from human player: " << currentBoardState << "Board state from computer " << currentBoardState_Computer;
 
@@ -389,21 +389,21 @@ void MainWindow::on_row1col2_clicked()
             redrawBoard();
         }
 
+
+        vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
+        this->board->setBoardMove(move[0],move[1],O);//Set the board position
+
+        setMove_UI(move[0],move[1],COMPUTERPLAYER);
+
+        this->board->PrintBoard(); //Printing out for debugging purposes
+        //AlsoF we want to check if there are no other moves in the game
+        currentBoardState_Computer = this->board->checkState(move[0],move[1],O);
+
+        if (currentBoardState_Computer != 0){
+            redrawBoard();
+        }
+
     }
-    vector<int> move = this->computerPlayer->makeComputerMove(this->board->getBoard()); //Now We want to pass through the current board status in order to determine the move of the compute r
-    this->board->setBoardMove(move[0],move[1],O);//Set the board position
-
-    setMove_UI(move[0],move[1],COMPUTERPLAYER);
-
-    this->board->PrintBoard(); //Printing out for debugging purposes
-    //AlsoF we want to check if there are no other moves in the game
-    currentBoardState_Computer = this->board->checkState(move[0],move[1],O);
-
-    if (currentBoardState_Computer != 0){
-        redrawBoard();
-    }
-
-
     qDebug() << "Board State from human player: " << currentBoardState << "Board state from computer " << currentBoardState_Computer;
     //printboard_Debugger()
 
