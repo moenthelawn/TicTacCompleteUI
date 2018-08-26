@@ -20,7 +20,7 @@ private slots:
     void on_checkBox_stateChanged(int arg1);
     void redrawBoard();
     void setMove_UI(int i,int j,QString PlayerType);
-
+    void displayState(unsigned int boardState);
     void on_row0col0_clicked();
 
     void on_row0col1_clicked();
@@ -41,6 +41,14 @@ private slots:
 
     void deliverConfirmationMessage(unsigned currentBoardStateNumber);
 
+
+    void on_frame_windowIconTextChanged(const QString &iconText);
+
+    void on_GameWinner_linkActivated(const QString &link);
+
+    void on_GameWinner_customContextMenuRequested(const QPoint &pos);
+
+    void on_GameWinner_objectNameChanged(const QString &objectName);
 
 private:
     Ui::MainWindow *ui;
